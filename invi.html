@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Open This 💗</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Floating decorations -->
+    <div class="floating flower1">🌸</div>
+    <div class="floating flower2">🌷</div>
+    <div class="floating flower3">♡</div>
+    <div class="floating flower4">✨</div>
+    <div class="floating flower5">🌸</div>
+    <div class="floating flower6">❄️</div>
+    <div class="floating flower7">🫠</div>
+
+    <!-- Instagram style watermark -->
+    <div class="watermark">
+        <div>◎</div>
+        <span>@vibu.__.20</span>
+    </div>
+
+
+    <main class="container">
+
+        <!-- =========================
+             PAGE 1 : EMAIL
+        ========================== -->
+
+        <section class="page active" id="page1">
+
+            <div class="email-card">
+
+                <div class="email-header">
+                    <span>📩</span>
+                    <span>New Message</span>
+                </div>
+
+                <div class="email-content">
+
+                    <p class="mail-from">
+                        <b>From:</b> Your Favourite Person 💗
+                    </p>
+
+                    <p class="mail-to">
+                        <b>To:</b> You
+                    </p>
+
+                    <hr>
+
+                    <h2>Open pls 🥺</h2>
+
+                    <p>
+                        Hey you...
+                    </p>
+
+                    <p>
+                        I have something important to ask you.
+                    </p>
+
+                    <button class="pink-button" onclick="openInvitation()">
+                        Open this 💌
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PAGE 2 : DATE QUESTION
+        ========================== -->
+
+        <section class="page" id="page2">
+
+            <div class="card">
+
+                <div class="cute-image">
+                    🐶
+                </div>
+
+                <h1>
+                    🌸 Will you go on a date
+                    with me? 💗
+                </h1>
+
+                <div class="buttons">
+
+                    <button
+                        class="yes-button"
+                        onclick="sayYes()">
+                        YES 💗
+                    </button>
+
+                    <button
+                        class="no-button"
+                        id="noButton"
+                        onclick="sayNo()">
+                        NO 😭
+                    </button>
+
+                </div>
+
+                <p id="noMessage" class="small-message"></p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PAGE 3 : YES REACTION
+        ========================== -->
+
+        <section class="page" id="page3">
+
+            <div class="card">
+
+                <div class="big-emoji">
+                    🥹💗
+                </div>
+
+                <h1>
+                    WAIT YOU ACTUALLY
+                    SAID YES?? 😭
+                </h1>
+
+                <p>
+                    I was so ready for you to say no 🥺
+                </p>
+
+                <button
+                    class="pink-button"
+                    onclick="showPage(4)">
+                    I'm ready! 💕
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PAGE 4 : DATE + TIME
+        ========================== -->
+
+        <section class="page" id="page4">
+
+            <div class="card">
+
+                <div class="date-icon">
+                    📅 🐾
+                </div>
+
+                <h1>
+                    So... when are you free?
+                </h1>
+
+                <p class="subtitle">
+                    Pick a day & time 💗
+                </p>
+
+
+                <label for="date">
+                    Pick a Day 📅
+                </label>
+
+                <input
+                    type="date"
+                    id="date">
+
+
+                <label for="time">
+                    What Time? ⏰
+                </label>
+
+                <select id="time">
+
+                    <option value="">
+                        Select a time...
+                    </option>
+                    <option>9:00 AM</option>
+                    <option>9:30 AM</option>
+                    <option>10:00 AM</option>
+                    <option>11:00 AM</option>
+                    <option>12:00 PM</option>
+                    <option>12:30 PM</option>
+                    <option>1:00 PM</option>
+                    <option>1:30 PM</option>
+                    <option>2:00 PM</option>
+                    <option>2:30 PM</option>
+                    <option>3:00 PM</option>
+                    <option>3:30 PM</option>
+                    <option>4:00 PM</option>
+                    <option>4:30 PM</option>
+                    <option>5:00 PM</option>
+                    <option>5:30 PM</option>
+                    
+
+                </select>
+
+
+                <button
+                    class="pink-button full-button"
+                    onclick="saveDateTime()">
+
+                    Set the date! 💗
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PAGE 5 : FOOD
+        ========================== -->
+
+        <section class="page" id="page5">
+
+            <div class="card">
+
+                <div class="food-icon">
+                    🍽️
+                </div>
+
+                <h1>
+                    What are we feeling? 🍴✨
+                </h1>
+
+                <p class="subtitle">
+                    Pick your vibe
+                </p>
+
+
+                <div class="food-grid">
+
+                    <button
+                        class="food-option"
+                        onclick="chooseFood(this, 'Pizza 🍕')">
+
+                        <span>🍕</span>
+                        <small>Pizza</small>
+
+                    </button>
+
+
+                    <button
+                        class="food-option"
+                        onclick="chooseFood(this, 'Fried Rice 🍱')">
+
+                        <span>🍱</span>
+                        <small>Fried Rice</small>
+
+                    </button>
+
+
+                    <button
+                        class="food-option"
+                        onclick="chooseFood(this, 'Burgers 🍔')">
+
+                        <span>🍔</span>
+                        <small>Burgers</small>
+
+                    </button>
+
+
+                    <button
+                        class="food-option"
+                        onclick="chooseFood(this, 'Parotta 🫓')">
+
+                        <span>🫓</span>
+                        <small>Parotta</small>
+
+                    </button>
+
+
+                    <button
+                        class="food-option"
+                        onclick="chooseFood(this, 'Shawarma 🌯')">
+
+                        <span>🌯</span>
+                        <small>Shawarma </small>
+
+                    </button>
+
+
+                    <button
+                        class="food-option"
+                        onclick="chooseFood(this, 'Biriyani 🍛')">
+
+                        <span>🍛</span>
+                        <small>Biriyani </small>
+
+                    </button>
+
+                </div>
+
+
+                <button
+                    class="pink-button full-button"
+                    onclick="confirmFood()">
+
+                    That's my choice 💗
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PAGE 6 : CONFIRMATION
+        ========================== -->
+
+        <section class="page" id="page6">
+
+            <div class="card">
+
+                <div class="big-emoji">
+                    💕
+                </div>
+
+                <h1>
+                    It's a Date! 🥰
+                </h1>
+
+                <p>
+                    Okayyy, everything is planned!
+                </p>
+
+                <div class="details">
+
+                    <div>
+                        📅
+                        <b>Date</b>
+                        <span id="finalDate"></span>
+                    </div>
+
+                    <div>
+                        ⏰
+                        <b>Time</b>
+                        <span id="finalTime"></span>
+                    </div>
+
+                    <div>
+                        🍴
+                        <b>Food</b>
+                        <span id="finalFood"></span>
+                    </div>
+
+                </div>
+
+
+                <p class="love-text">
+                    Don't be late...  
+                    I'll be waiting for you. 💗
+                </p>
+
+
+                <button
+                    class="pink-button"
+                    onclick="showPage(7)">
+
+                    One last thing 👀
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PAGE 7 : FUNNY ENDING
+        ========================== -->
+
+        <section class="page" id="page7">
+
+            <div class="card">
+
+                <div class="big-emoji">
+                    💸
+                </div>
+
+                <h1>
+                    One Small Problem...
+                </h1>
+
+                <p>
+                    There is a tiny confirmation fee
+                    for this date. 😌
+                </p>
+
+                <div class="price">
+                    ₹499
+                </div>
+
+                <p class="small-message">
+                    Includes unlimited smiles,
+                    bad jokes and one unforgettable date 😂
+                </p>
+
+
+                <button
+                    class="pink-button"
+                    onclick="finalReveal()">
+
+                    Pay ₹499 😂
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PAGE 8 : FINAL
+        ========================== -->
+
+        <section class="page" id="page8">
+
+            <div class="card final-card">
+
+                <div class="big-emoji">
+                    ❤️
+                </div>
+
+                <h1>
+                    JUST KIDDING! 😂
+                </h1>
+
+                <p>
+                    Your only payment is...
+                </p>
+
+                <h2>
+                    ONE BIG SMILE 😊
+                </h2>
+
+                <p>
+                    See you on our date! 💗
+                </p>
+
+                <div class="heart-animation">
+                    💕 💗 💕
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Confetti container -->
+    <div id="confetti-container"></div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

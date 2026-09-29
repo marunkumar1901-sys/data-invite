@@ -1,0 +1,932 @@
+/* =================================
+   BASIC SETTINGS
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #fff4f8,
+            #f9e1ea 45%,
+            #f3d2df
+        );
+
+    color: #6f3049;
+
+    overflow: hidden;
+
+}
+
+
+/* =================================
+   MAIN CONTAINER
+================================= */
+
+.container {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    position: relative;
+
+    padding: 20px;
+
+}
+
+
+/* =================================
+   PAGES
+================================= */
+
+.page {
+
+    display: none;
+
+    width: 100%;
+
+    max-width: 430px;
+
+    animation:
+        pageIn 0.7s ease;
+
+}
+
+
+.page.active {
+
+    display: block;
+
+}
+
+
+@keyframes pageIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(20px)
+            scale(0.95);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* =================================
+   NORMAL CARD
+================================= */
+
+.card {
+
+    width: 100%;
+
+    background:
+        rgba(255, 255, 250, 0.94);
+
+    border-radius: 18px;
+
+    padding: 30px 25px;
+
+    text-align: center;
+
+    box-shadow:
+        0 15px 40px
+        rgba(100, 40, 65, 0.14);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.8);
+
+}
+
+
+/* =================================
+   EMAIL CARD
+================================= */
+
+.email-card {
+
+    background: #fff;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 15px 40px
+        rgba(100,40,65,0.15);
+
+}
+
+
+.email-header {
+
+    background: #f8dce6;
+
+    padding: 16px 20px;
+
+    display: flex;
+
+    gap: 10px;
+
+    align-items: center;
+
+    font-size: 15px;
+
+    color: #7a4054;
+
+}
+
+
+.email-content {
+
+    padding: 25px;
+
+    text-align: left;
+
+}
+
+
+.mail-from,
+.mail-to {
+
+    font-size: 13px;
+
+    color: #92717d;
+
+    margin-bottom: 8px;
+
+}
+
+
+.email-content hr {
+
+    border: 0;
+
+    border-top:
+        1px solid #eee;
+
+    margin: 18px 0;
+
+}
+
+
+.email-content h2 {
+
+    color: #7b314b;
+
+    margin-bottom: 18px;
+
+}
+
+
+.email-content p {
+
+    margin-bottom: 12px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =================================
+   HEADINGS
+================================= */
+
+h1 {
+
+    color: #773049;
+
+    font-size: 25px;
+
+    line-height: 1.35;
+
+    margin-bottom: 12px;
+
+}
+
+
+h2 {
+
+    color: #79334d;
+
+}
+
+
+.subtitle {
+
+    color: #a27685;
+
+    font-size: 13px;
+
+    margin-bottom: 18px;
+
+}
+
+
+p {
+
+    line-height: 1.6;
+
+    font-size: 14px;
+
+    color: #88606f;
+
+}
+
+
+/* =================================
+   BUTTONS
+================================= */
+
+button {
+
+    font-family: inherit;
+
+    cursor: pointer;
+
+    border: none;
+
+}
+
+
+.pink-button {
+
+    background:
+        linear-gradient(
+            135deg,
+            #e99ab6,
+            #d9789c
+        );
+
+    color: white;
+
+    padding: 12px 25px;
+
+    border-radius: 30px;
+
+    margin-top: 15px;
+
+    font-size: 14px;
+
+    box-shadow:
+        0 5px 15px
+        rgba(200,90,130,0.2);
+
+    transition:
+        transform 0.25s,
+        box-shadow 0.25s;
+
+}
+
+
+.pink-button:hover {
+
+    transform: translateY(-2px)
+               scale(1.03);
+
+    box-shadow:
+        0 8px 20px
+        rgba(200,90,130,0.3);
+
+}
+
+
+.pink-button:active {
+
+    transform: scale(0.96);
+
+}
+
+
+.full-button {
+
+    width: 100%;
+
+}
+
+
+/* =================================
+   YES / NO
+================================= */
+
+.buttons {
+
+    margin-top: 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+}
+
+
+.yes-button,
+.no-button {
+
+    padding: 11px 25px;
+
+    border-radius: 25px;
+
+    font-size: 14px;
+
+    transition:
+        0.25s ease;
+
+}
+
+
+.yes-button {
+
+    background: #e58cab;
+
+    color: white;
+
+}
+
+
+.no-button {
+
+    background: #f1c8d5;
+
+    color: #7c4055;
+
+}
+
+
+.yes-button:hover,
+.no-button:hover {
+
+    transform: scale(1.08);
+
+}
+
+
+.small-message {
+
+    font-size: 12px;
+
+    margin-top: 15px;
+
+    color: #a25d76;
+
+}
+
+
+/* =================================
+   CUTE IMAGE / EMOJIS
+================================= */
+
+.cute-image {
+
+    width: 85px;
+
+    height: 85px;
+
+    border-radius: 18px;
+
+    background: #f7e4e9;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 48px;
+
+    margin:
+        0 auto 20px;
+
+}
+
+
+.big-emoji {
+
+    font-size: 55px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.date-icon {
+
+    font-size: 42px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.food-icon {
+
+    font-size: 42px;
+
+    margin-bottom: 8px;
+
+}
+
+
+/* =================================
+   INPUTS
+================================= */
+
+label {
+
+    display: block;
+
+    text-align: left;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    color: #875166;
+
+    margin-top: 15px;
+
+    margin-bottom: 6px;
+
+}
+
+
+input,
+select {
+
+    width: 100%;
+
+    height: 40px;
+
+    border:
+        1px solid #e3b4c4;
+
+    border-radius: 8px;
+
+    padding: 0 12px;
+
+    background: #fff;
+
+    color: #754055;
+
+    font-family: inherit;
+
+    outline: none;
+
+}
+
+
+input:focus,
+select:focus {
+
+    border-color: #d77e9f;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(215,126,159,0.12);
+
+}
+
+
+/* =================================
+   FOOD GRID
+================================= */
+
+.food-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 10px;
+
+    margin-top: 18px;
+
+}
+
+
+.food-option {
+
+    background: #fff7f9;
+
+    border:
+        1px solid #f2dbe2;
+
+    border-radius: 12px;
+
+    padding: 13px 5px;
+
+    color: #754055;
+
+    transition: 0.25s ease;
+
+}
+
+
+.food-option span {
+
+    display: block;
+
+    font-size: 27px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.food-option small {
+
+    font-family: inherit;
+
+}
+
+
+.food-option:hover {
+
+    transform: translateY(-3px);
+
+    border-color: #dd8fab;
+
+}
+
+
+.food-option.selected {
+
+    background: #f9dce7;
+
+    border:
+        2px solid #d77b9c;
+
+    transform: scale(1.03);
+
+}
+
+
+/* =================================
+   FINAL DETAILS
+================================= */
+
+.details {
+
+    margin-top: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+}
+
+
+.details div {
+
+    background: #fff4f7;
+
+    border-radius: 10px;
+
+    padding: 11px;
+
+    display: grid;
+
+    grid-template-columns:
+        30px 70px 1fr;
+
+    align-items: center;
+
+    text-align: left;
+
+    font-size: 13px;
+
+}
+
+
+.details span {
+
+    color: #9a6879;
+
+}
+
+
+.love-text {
+
+    margin-top: 20px;
+
+    color: #8a4a62;
+
+}
+
+
+/* =================================
+   PRICE
+================================= */
+
+.price {
+
+    font-size: 38px;
+
+    font-weight: bold;
+
+    color: #d86d94;
+
+    margin: 15px;
+
+}
+
+
+.final-card h2 {
+
+    margin:
+        15px 0;
+
+    color: #d2648a;
+
+}
+
+
+.heart-animation {
+
+    margin-top: 20px;
+
+    font-size: 25px;
+
+    animation:
+        heartbeat 1.2s infinite;
+
+}
+
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+
+        transform: scale(1);
+
+    }
+
+    50% {
+
+        transform: scale(1.15);
+
+    }
+
+}
+
+
+/* =================================
+   FLOATING DECORATIONS
+================================= */
+
+.floating {
+
+    position: fixed;
+
+    pointer-events: none;
+
+    opacity: 0.55;
+
+    animation:
+        floating 5s infinite ease-in-out;
+
+}
+
+
+.flower1 {
+
+    top: 10%;
+
+    left: 8%;
+
+}
+
+
+.flower2 {
+
+    top: 18%;
+
+    right: 10%;
+
+    animation-delay: 1s;
+
+}
+
+
+.flower3 {
+
+    bottom: 20%;
+
+    left: 12%;
+
+    font-size: 30px;
+
+    animation-delay: 2s;
+
+}
+
+
+.flower4 {
+
+    bottom: 12%;
+
+    right: 12%;
+
+    animation-delay: 3s;
+
+}
+
+
+.flower5 {
+
+    top: 55%;
+
+    left: 4%;
+
+    animation-delay: 1.5s;
+
+}
+
+
+@keyframes floating {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-18px)
+            rotate(8deg);
+
+    }
+
+}
+
+
+/* =================================
+   WATERMARK
+================================= */
+
+.watermark {
+
+    position: fixed;
+
+    top: 35px;
+
+    right: 25px;
+
+    color: white;
+
+    text-align: center;
+
+    z-index: 20;
+
+    font-family: Arial, sans-serif;
+
+    text-shadow:
+        0 1px 5px
+        rgba(0,0,0,0.15);
+
+}
+
+
+.watermark div {
+
+    font-size: 25px;
+
+}
+
+
+.watermark span {
+
+    font-size: 11px;
+
+}
+
+
+/* =================================
+   CONFETTI
+================================= */
+
+.confetti {
+
+    position: fixed;
+
+    width: 8px;
+
+    height: 8px;
+
+    top: -10px;
+
+    border-radius: 2px;
+
+    pointer-events: none;
+
+    z-index: 100;
+
+    animation:
+        confettiFall 3s linear forwards;
+
+}
+
+
+@keyframes confettiFall {
+
+    to {
+
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 450px) {
+
+    .container {
+
+        padding: 15px;
+
+    }
+
+
+    .card {
+
+        padding:
+            25px 20px;
+
+    }
+
+
+    h1 {
+
+        font-size: 22px;
+
+    }
+
+
+    .food-grid {
+
+        gap: 8px;
+
+    }
+
+
+    .food-option {
+
+        padding: 11px 3px;
+
+    }
+
+}
